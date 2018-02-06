@@ -1,0 +1,35 @@
+hr {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  border-top: 1px solid #eee;
+}
+
+section#photography {
+  padding-top: 250px;
+  padding-bottom: 0px;
+}
+
+div.btn-group {
+  margin-top: 5px;
+}
+
+div.btn-group label {
+  margin-right:5px;
+}
+
+div.btn-group label.active {
+  color: #000;
+  border: 1px solid #42dca3;
+  outline: 0;
+  background-color: #42dca3;
+}
+
+div#noPhotosFound {
+  color: red;
+  margin-top: 159px;
+  margin-bottom: 240px;
+}
+
+div#noPhotosFound p, b {
+  margin-bottom: 5px;
+}

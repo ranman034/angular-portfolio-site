@@ -1,0 +1,27 @@
+<section id="photo-list" class="content-section">
+  <div class="row offset-lg-2">
+    <div class="col-lg-2 ">
+      <button
+        class="btn btn-success"
+        routerLink="new">New Photograph</button>
+      <hr>
+      <button
+        class="btn btn-success"
+        (click)="onSaveData()">Commit Photo Changes</button>
+    </div>
+  </div>
+  <hr />
+  <div class="row offset-lg-2">
+    <div class="col-lg-4">
+      <ul class="list-inline">
+        <li *ngFor="let photo of (photosState | async).allPhotos">
+          <a routerLink="{{photo.slug}}/edit"
+             class="btn btn-default btn-lg" style="margin:5px 0px 5px 0px;">{{ photo.name }}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</section>

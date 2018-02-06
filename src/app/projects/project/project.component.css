@@ -1,0 +1,46 @@
+section.explaination-section {
+  padding-top: 50px;
+}
+
+section.explaination-section div.title {
+  color: white;
+  border-radius: 10px;
+  border-width: thin;
+  border-style: solid;
+  margin-bottom: 50px;
+  padding-top: 10px;
+  width: 100px;
+}
+
+section.explaination-section div.title p {
+  margin-bottom: 10px;
+  color: #42dca3;
+  font-weight: bold;
+}
+
+.skills {
+    display: inline-block;
+    width: auto;
+}
+
+.skills ul {
+    list-style-position: inside;
+    list-style-type: none;
+    padding-left: 0px;
+    font-size: 16px;
+    text-align: left;
+}
+
+@media (max-width: 992px) {
+  section.explaination-section div.title {
+    color: white;
+    border-style: none;
+    margin-bottom: 50px;
+    padding-top: 10px;
+    width: 100px;
+  }
+  section.explaination-section div.title {
+    width: 100%;
+    height: 100%
+  }
+}

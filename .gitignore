@@ -1,5 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# db creds
+app.component.dbcred.ts
+
 # compiled output
 /dist
 /tmp

@@ -1,0 +1,87 @@
+  <section id="explanation" class="container explaination-section text-center">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-3 title">
+        <h1>{{project.name}}</h1>
+        <p>Created in: {{project.year}}</p>
+      </div>
+    </div>
+    <div class="row">
+    	<div class="col-lg-6">
+    		<div class="screenshots">
+    			<h1>Screenshots</h1>
+    			<ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+    			<hr>
+    		</div>
+    	</div>
+    	<div class="col-lg-6">
+    		<div class="description">
+    			<h1>Description</h1>
+    			<p *ngIf="!project.descriptionStyling">{{ project.description }}</p>
+          <p *ngIf="project.descriptionStyling" innerHTML="{{ project.description }}"></p>
+    			<hr>
+    		</div>
+    	</div>
+    </div>
+  </section>
+
+<section
+  class="container explaination-section-info text-center">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+    	<div class="skills">
+    		<h1>Skills</h1>
+    		<ul>
+          <li
+            *ngIf="project.database && project.databaseStyling"
+            innerHTML="<strong>Database: </strong>{{ project.database }}"></li>
+          <li
+            *ngIf="project.database && !project.databaseStyling">
+            <strong>Database: </strong>{{ project.database }}</li>
+          <li
+            *ngIf="project.frontEnd && project.frontEndStyling"
+            innerHTML="<strong>Front-end: </strong>{{ project.frontEnd }}"></li>
+          <li
+            *ngIf="project.frontEnd && !project.frontEndStyling">
+            <strong>Front-end: </strong>{{ project.frontEnd }}</li>
+          <li
+            *ngIf="project.backEnd && project.backEndStyling"
+            innerHTML="<strong>Back-end: </strong>{{ project.backEnd }}"></li>
+          <li
+            *ngIf="project.backEnd && !project.backEndStyling">
+            <strong>Back-end: </strong>{{ project.backEnd }}</li>
+          <li
+            *ngIf="project.webServer && project.webServerStyling"
+            innerHTML="<strong>Web server: </strong>{{ project.webServer }}"></li>
+          <li
+            *ngIf="project.webServer && !project.webServerStyling">
+            <strong>Web server: </strong>{{ project.webServer }}</li>
+          <li
+            *ngIf="project.paas && project.paasStyling"
+            innerHTML="<strong>Paas: </strong>{{ project.paas }}"></li>
+          <li
+            *ngIf="project.paas && !project.paasStyling">
+            <strong>Paas: </strong>{{ project.paas }}</li>
+          <li
+            *ngIf="project.versionControl && project.versionControlStyling"
+            innerHTML="<strong>Version control: </strong>{{ project.versionControl }}"></li>
+          <li
+            *ngIf="project.versionControl && !project.versionControlStyling">
+            <strong>Version control: </strong>{{ project.versionControl }}</li>
+          <li
+            *ngIf="project.buildTool && project.buildTool"
+            innerHTML="<strong>Build tool: </strong> {{project.buildTool}}"></li>
+          <li
+            *ngIf="project.buildTool && !project.buildTool">
+            <strong>Build tool: </strong>{{ project.buildTool }}</li>
+    			<li
+            *ngIf="project.styling && project.stylingStyling"
+            innerHTML="<strong>Styling: </strong> {{project.styling}}"></li>
+          <li
+            *ngIf="project.styling && !project.stylingStyling">
+            <strong>Build tool: </strong>{{ project.styling }}</li>
+    		</ul>
+    		<hr>
+    	</div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,284 @@
+<section id="project-edit" >
+  <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-lg-12">
+        <button
+          type="submit"
+          class="btn btn-success"
+          [disabled]="!projectForm.valid">Save</button>
+        <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+        <button type="button" class="btn btn-danger" (click)="onDelete()">Delete</button>
+        <br /><br />
+      </div>
+    </div>
+    <div class="form-row col-lg-12">
+      <div class="form-group row">
+        <label for="name" class="col-lg-1">Name</label>
+        <div class="col-lg-5">
+          <input
+            type="text"
+            id="name"
+            formControlName="name"
+            class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="slug" class="col-lg-1">Slug</label>
+        <div class="col-lg-5">
+          <input
+            type="text"
+            id="slug"
+            formControlName="slug"
+            class="form-control">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="year" class="col-lg-1">Year</label>
+        <div class="col-lg-5">
+          <input
+            type="number"
+            id="year"
+            formControlName="year"
+            class="form-control">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="description" class="col-lg-3">Description</label>
+      <label for="descriptionStyling" class="col-lg-3 form-check-label">Use styling?</label>
+      <div class="col-lg-1">
+        <input
+          type="checkbox"
+          id="descriptionStyling"
+          formControlName="descriptionStyling"
+          class="form-control form-check-input">
+      </div>
+      <div class="col-lg-8">
+        <textarea
+          type="text"
+          id="description"
+          formControlName="description"
+          class="form-control"
+          rows="6"></textarea>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="database" class="col-lg-3">Database</label>
+      <label for="databaseStyling" class="col-lg-3 form-check-label">Use styling?</label>
+      <div class="col-lg-1">
+        <input
+          type="checkbox"
+          id="databaseStyling"
+          formControlName="databaseStyling"
+          class="form-control form-check-input">
+      </div>
+      <div class="col-lg-8">
+        <input
+          type="text"
+          id="database"
+          formControlName="database"
+          class="form-control">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="frontEnd" class="col-lg-3">Front-end</label>
+      <label for="frontEndStyling" class="col-lg-3 form-check-label">Use styling?</label>
+      <div class="col-lg-1">
+        <input
+          type="checkbox"
+          id="frontEndStyling"
+          formControlName="frontEndStyling"
+          class="form-control form-check-input">
+      </div>
+      <div class="col-lg-8">
+        <input
+          type="text"
+          id="frontEnd"
+          formControlName="frontEnd"
+          class="form-control">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="backEnd" class="col-lg-3">Back-end</label>
+      <label for="backEndStyling" class="col-lg-3 form-check-label">Use styling?</label>
+      <div class="col-lg-1">
+        <input
+          type="checkbox"
+          id="backEndStyling"
+          formControlName="backEndStyling"
+          class="form-control form-check-input">
+      </div>
+      <div class="col-lg-8">
+        <input
+          type="text"
+          id="backEnd"
+          formControlName="backEnd"
+          class="form-control">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="webServer" class="col-lg-3">Webserver</label>
+      <label for="webServerStyling" class="col-lg-3 from-check-label">Use styling?</label>
+      <div class="col-lg-1">
+        <input
+          type="checkbox"
+          id="webServerStyling"
+          formControlName="webServerStyling"
+          class="form-control form-check-input">
+      </div>
+      <div class="col-lg-8">
+        <input
+          type="text"
+          id="webServer"
+          formControlName="webServer"
+          class="form-control">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="paas" class="col-lg-3">Paas</label>
+      <label for="paasStyling" class="col-lg-3 from-check-label">Use styling?</label>
+      <div class="col-lg-1">
+        <input
+          type="checkbox"
+          id="paasStyling"
+          formControlName="paasStyling"
+          class="form-control form-check-input">
+      </div>
+      <div class="col-lg-8">
+        <input
+          type="text"
+          id="paas"
+          formControlName="paas"
+          class="form-control">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="versionControl" class="col-lg-3">Version control</label>
+      <label for="versionControlStyling" class="col-lg-3 from-check-label">Use styling?</label>
+      <div class="col-lg-1">
+        <input
+          type="checkbox"
+          id="versionControlStyling"
+          formControlName="versionControlStyling"
+          class="form-control form-check-input">
+      </div>
+      <div class="col-lg-8">
+        <input
+          type="text"
+          id="versionControl"
+          formControlName="versionControl"
+          class="form-control">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="buildTool" class="col-lg-3">Build tool</label>
+      <label for="buildToolStyling" class="col-lg-3 from-check-label">Use styling?</label>
+      <div class="col-lg-1">
+        <input
+          type="checkbox"
+          id="buildToolStyling"
+          formControlName="buildToolStyling"
+          class="form-control form-check-input">
+      </div>
+      <div class="col-lg-8">
+        <input
+          type="text"
+          id="buildTool"
+          formControlName="buildTool"
+          class="form-control">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="styling" class="col-lg-3">Styling</label>
+      <label for="stylingStyling" class="col-lg-3 from-check-label">Use styling?</label>
+      <div class="col-lg-1">
+        <input
+          type="checkbox"
+          id="stylingStyling"
+          formControlName="stylingStyling"
+          class="form-control form-check-input">
+      </div>
+      <div class="col-lg-8">
+        <input
+          type="text"
+          id="styling"
+          formControlName="styling"
+          class="form-control">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="tags" class="col-lg-2">Tags</label>
+      <div class="col-lg-11">
+        <input
+          type="text"
+          id="tags"
+          formControlName="tags"
+          class="form-control">
+      </div>
+    </div>
+    <p class="screenshot-title">Screenshots</p>
+    <div class="row">
+      <div class="col-lg-9" formArrayName="screenshots">
+        <div
+          class="screenshots-list"
+          *ngFor="let screenshotCtrl of getControls(); let i = index"
+          [formGroupName]="i">
+          <div class="row">
+            <div class="col-lg-2">
+              <button
+              type="button"
+              class="btn btn-danger"
+              (click)="onDeleteScreenshot(i)"
+              style="float:left;">X</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-11 offset-lg-1">
+              <label for="name">Screenshot name</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="name">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-11 offset-lg-1">
+              <label for="slug">Screenshot slug</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="slug">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-11 offset-lg-1">
+              <label for="imgSource">Image URL</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="imgSource">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-11 offset-lg-1">
+              <label for="tmbSource">Thumb URL</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="tmbSource">
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-lg-12">
+            <button
+              type="button"
+              class="btn btn-success"
+              (click)="onAddScreenshot()">Add Screenshot</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>

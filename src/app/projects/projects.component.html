@@ -1,0 +1,29 @@
+<section id="projects" class="content-section text-center">
+	<div class="download-section">
+		<div class="container">
+			<div class="col-lg-8 offset-lg-2">
+				<h2>Projects</h2>
+				<ul class="list-inline">
+          <li *ngFor="let project of projects">
+            <a routerLink="{{project.slug}}"
+               class="btn btn-default btn-lg"
+              (click)="scroll(project, projectDiv)">{{ project.name }}</a><br>
+          </li>
+				</ul>
+        <hr />
+        <i>select a tag to filter projects.</i>
+        <br />
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-default btn-sm" *ngFor="let tag of (projectsState | async).tags">
+            <input type="checkbox" (click)="tagSelected($event,tag)">{{ tag }}
+          </label>
+        </div>
+			</div>
+		</div>
+	</div>
+</section>
+<div #projectDiv></div>
+<app-project *ngIf="projectSelected"
+      [project]="projectSelected"
+      [index]="i"></app-project>
+<app-footer></app-footer>

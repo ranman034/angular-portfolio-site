@@ -1,0 +1,15 @@
+.form-check-input {
+    margin-bottom: 5px;
+}
+
+.screenshot-title {
+  margin-bottom: 5px;
+}
+
+.screenshots-list {
+  margin-top: 10px;
+  padding: 5px;
+  border-style: dashed;
+  border-color: white;
+  border-width: 1px;
+}

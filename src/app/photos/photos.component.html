@@ -1,0 +1,32 @@
+<!-- Photography Section -->
+<section id="photography" class="content-section text-center">
+<div class="photography-section">
+	<div class="row">
+		<div class="col-lg-8 offset-lg-2">
+			<h2>Photography</h2>
+			<p>
+			    Here are some of my favorite photographs from my travels.
+			</p>
+      <ngx-gallery
+        *ngIf="galleryImages.length > 0; else errorTemplate"
+        [options]="galleryOptions"
+        [images]="galleryImages"></ngx-gallery>
+      <ng-template #errorTemplate>
+        <div id="noPhotosFound" class="col-lg-8 offset-lg-2">
+          <p>No photographs have all of the following tags:</p>
+          <b *ngFor="let tag of (tagsSelected | listify); let i = index">{{ tag }}</b>
+        </div>
+      </ng-template>
+      <hr />
+      <i>select a tag to filter photographs.</i>
+      <br />
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-default btn-sm" *ngFor="let tag of (photosState | async).tags">
+          <input type="checkbox" (click)="tagSelected($event,tag)">{{ tag }}
+        </label>
+      </div>
+		</div>
+	</div>
+  </div>
+</section>
+<app-footer></app-footer>
