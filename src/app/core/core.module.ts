@@ -9,9 +9,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 import { SharedModule } from '../shared/shared.module';
 
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { LoggingInterceptor } from '../shared/logging.interceptor';
-
 @NgModule({
   declarations: [
     AboutComponent,
@@ -28,7 +25,6 @@ import { LoggingInterceptor } from '../shared/logging.interceptor';
     NavbarComponent
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true}
   ]
 })
 export class CoreModule {}

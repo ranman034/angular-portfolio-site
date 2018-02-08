@@ -51,7 +51,6 @@ export class AuthEffects {
       })
       .mergeMap((token: string) => {
         this.router.navigate(["/project-list"]);
-        console.log(token);
         return [
           {
             type: AuthActions.SIGNIN

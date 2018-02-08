@@ -178,7 +178,7 @@ export class ProjectEditComponent implements OnInit {
       'buildToolStyling': new FormControl(projectBuildToolStyling),
       'stylingStyling': new FormControl(projectStylingStyling),
       'screenshots': projectScreenshots,
-      'tags': new FormControl(projectTags)
+      'tags': new FormControl(projectTags,Validators.required)
     });
   }
 

@@ -96,7 +96,7 @@ export class PhotoEditComponent implements OnInit {
       'slug': new FormControl(photoSlug, [Validators.required, this.forbiddenPhotoSlugNames.bind(this)]),
       'imgSource': new FormControl(photoImgSource, Validators.required),
       'tmbSource': new FormControl(photoTmbSource),
-      'tags': new FormControl(photoTags)
+      'tags': new FormControl(photoTags, Validators.required)
     });
   }
 

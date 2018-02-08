@@ -26,12 +26,6 @@ export class PhotosEffects {
     })
     .map(
       (photos) => {
-        console.log(photos);
-        for (let photo of photos) {
-          if (!photo['tags']) {
-             photo['tags'] = [];
-          }
-        }
         return {
           type: PhotosActions.SET_PHOTOS,
           payload: photos

@@ -26,12 +26,6 @@ export class ProjectsEffects {
     })
     .map(
       (projects) => {
-        console.log(projects);
-        for (let project of projects) {
-          if (!project['tags']) {
-            project['tags'] = [];
-          }
-        }
         return {
           type: ProjectsActions.SET_PROJECTS,
           payload: projects

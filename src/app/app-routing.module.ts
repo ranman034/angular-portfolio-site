@@ -15,9 +15,7 @@ const appRoutes: Routes = [
   { path: 'projects', component: ProjectsComponent, children: [
     { path: ':name', component: ProjectComponent}
   ]},
-  { path: 'contact', component: ContactComponent},
-  // otherwise redirect to home
-  // { path: '**', redirectTo: '' }
+  { path: 'contact', component: ContactComponent}
 ];
 
 @NgModule({
