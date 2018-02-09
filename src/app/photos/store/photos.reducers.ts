@@ -47,9 +47,18 @@ const initialState: State = {
 export function photosReducer(state = initialState, action: PhotosActions.PhotosActions) {
   switch(action.type) {
     case PhotosActions.SET_PHOTOS:
+      let setTags = [];
+      action.payload.forEach((photo, index) => {
+        photo.tags.forEach((currTag, index) => {
+          if (!setTags.includes(currTag)){
+            setTags.push(currTag);
+          }
+        });
+      })
       return {
         ...state,
-      allPhotos: [...action.payload]
+      allPhotos: [...action.payload],
+      tags: setTags.sort()
     };
     case PhotosActions.ADD_PHOTO:
       return {

@@ -81,10 +81,19 @@ const initialState: State = {
 
 export function projectsReducer(state = initialState, action: ProjectsActions.ProjectsActions) {
   switch(action.type) {
-    case ProjectsActions.SET_PROJECTS:
+      case ProjectsActions.SET_PROJECTS:
+      let setTags = [];
+      action.payload.forEach((project, index) => {
+        project.tags.forEach((currTag, index) => {
+          if (!setTags.includes(currTag)){
+            setTags.push(currTag);
+          }
+        });
+      })
       return {
         ...state,
-      projects: [...action.payload]
+      projects: [...action.payload],
+      tags: setTags.sort()
     };
     case ProjectsActions.ADD_PROJECT:
       return {

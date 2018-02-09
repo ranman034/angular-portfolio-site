@@ -3,6 +3,15 @@
 # db creds
 app.component.dbcred.ts
 
+# imgs
+/src/assets/img/800x600
+/src/assets/img/gma
+/src/assets/img/senior
+/src/assets/img/sirearms
+/src/assets/img/thumbnails
+/src/assets/img/tylerraney.com
+/src/assets/img/vccicc
+
 # compiled output
 /dist
 /tmp

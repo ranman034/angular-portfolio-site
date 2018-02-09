@@ -21,6 +21,10 @@ div.btn-group {
   margin-top: 5px;
 }
 
+div.btn-group input {
+  display:none;
+}
+
 div.btn-group label {
   margin-right:5px;
 }

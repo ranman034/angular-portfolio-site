@@ -14,9 +14,11 @@
         <i>select a tag to filter projects.</i>
         <br />
         <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-default btn-sm" *ngFor="let tag of (projectsState | async).tags">
-            <input type="checkbox" (click)="tagSelected($event,tag)">{{ tag }}
-          </label>
+          <div class="row">
+            <label class="btn btn-default btn-sm" *ngFor="let tag of (projectsState | async).tags">
+              <input type="checkbox" (click)="tagSelected($event,tag)">{{ tag }}
+            </label>
+          </div>
         </div>
 			</div>
 		</div>
