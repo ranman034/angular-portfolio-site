@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 
@@ -18,7 +18,7 @@ import { Photo } from '../../photos/photo.model';
    // attach the fade in animation to the host (root) element of this component
    host: { '[@fadeInAnimation]': '' }
 })
-export class ProjectComponent implements OnInit {
+export class ProjectComponent implements OnInit, OnChanges {
   @Input() project: Project;
   @Input() index: number;
   galleryOptions: NgxGalleryOptions[];
@@ -55,14 +55,17 @@ export class ProjectComponent implements OnInit {
                 thumbnailMargin: 20
             }
         ];
+  }
 
-        for (let photo of this.project.screenshots) {
-          this.galleryImages.push({
-            small: photo.imgSource,
-            medium: photo.imgSource,
-            big: photo.imgSource,
-            description: photo.name
-          });
-        }
+  ngOnChanges() {
+    this.galleryImages = [];
+    for (let photo of this.project.screenshots) {
+      this.galleryImages.push({
+        small: photo.imgSource,
+        medium: photo.imgSource,
+        big: photo.imgSource,
+        description: photo.name
+      });
+    }
   }
 }
