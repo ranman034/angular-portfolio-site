@@ -103,6 +103,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+## Future Updates
+
+1. Full Test Suite
+2. Editable "About Me" Section
+3. Preview photograph in administrator view
+4. Option to change background
+
 ## Acknowledgments
 
 * Maximilian Schwarzmüller's course on [Udemy.com](https://www.udemy.com/the-complete-guide-to-angular-2/learn/v4/content)
